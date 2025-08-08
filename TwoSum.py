@@ -1,17 +1,20 @@
-# Define the function without 'self'
-def TwoSum(nums, target):
-    heatmap = {}  # Dictionary to store number and its index
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in heatmap:
-            return [heatmap[complement], i]
-        heatmap[num] = i
-    return []
+class Solution(object):
+    def TwoSum(self, nums, target):
+        heatmap = {}  # store num:index
+        for i, num in enumerate(nums):  # loop with index & value
+            complement = target - num   # needed number
+            if complement in heatmap:   # check if it exists
+                return [heatmap[complement], i]  # return indices
+            heatmap[num] = i  # save current num:index
+        return []  # no pair found
 
-# Input values
+
+# Input values (must be OUTSIDE the class)
 nums = [2, 5, 7, 9]
 target = 7
 
-# Call the function and print result
-result = TwoSum(nums, target)
-print("Indices:", result)
+# Create object of Solution class
+result = Solution()
+
+# Call method and print
+print("Indices:", result.TwoSum(nums, target))  # expected: [0, 1]
