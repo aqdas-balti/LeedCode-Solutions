@@ -47,4 +47,4 @@ print(sol.isValid("()[]{}"))   # True
 print(sol.isValid("(]"))       # False
 
 # Example 3: Another valid example
-print(sol.isValid("{[()]}"))   # True
+# print(sol.isValid("{[()]}"))   # True
