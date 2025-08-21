@@ -4,7 +4,6 @@ class ListNode:
         self.val = val
         self.next = next
 
-
 class Solution:
     def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
         # Create a dummy node to start the merged list
@@ -29,7 +28,6 @@ class Solution:
 
         return dummy.next
 
-
 # ----------------------------
 # Helper functions for testing
 # ----------------------------
@@ -50,8 +48,6 @@ def linked_list_to_list(head):
         result.append(head.val)
         head = head.next
     return result
-
-
 # ----------------------------
 # Testing
 # ----------------------------
