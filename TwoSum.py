@@ -4,7 +4,7 @@ class Solution(object):
         for i, num in enumerate(nums):  # loop with index & value
             complement = target - num   # needed number
             if complement in heatmap:   # check if it exists
-                return [heatmap[complement], i]  # return indices
+                return [heatmap[complement], i]  # return indices heatmap[complement] → complement ka index deta hai.   i → current number ka index hai.
             heatmap[num] = i  # save current num:index
         return []  # no pair found
 
