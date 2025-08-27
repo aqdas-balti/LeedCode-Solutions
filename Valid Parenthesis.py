@@ -1,9 +1,5 @@
 class Solution(object):
     def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
 
         # Mapping of each opening bracket to its correct closing bracket
         mapping = {'(': ')', '[': ']', '{': '}'}
