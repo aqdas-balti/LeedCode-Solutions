@@ -31,30 +31,28 @@ class Solution:
 # ----------------------------
 # Helper functions for testing
 # ----------------------------
-
 # Convert Python list -> Linked list
-# def build_linked_list(values):
-#     dummy = ListNode()
-#     current = dummy
-#     for val in values:
-#         current.next = ListNode(val)
-#         current = current.next
-#     return dummy.next
-
-# # Convert Linked list -> Python list
-# def linked_list_to_list(head):
-#     result = []
-#     while head:
-#         result.append(head.val)
-#         head = head.next
-#     return result
+def build_linked_list(values):
+    dummy = ListNode()
+    current = dummy
+    for val in values:
+        current.next = ListNode(val)
+        current = current.next
+    return dummy.next
+# Convert Linked list -> Python list
+def linked_list_to_list(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
 # ----------------------------
 # Testing
 # ----------------------------
 if __name__ == "__main__":
     # Example input
-    list1 = [1, 2, 4]
-    list2 = [1, 3, 4]
+    list1 = build_linked_list([1, 2, 4])
+    list2 = build_linked_list([1, 3, 4])
 
     solution = Solution()
     merged_head = solution.mergeTwoLists(list1, list2)
