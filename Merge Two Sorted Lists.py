@@ -31,7 +31,6 @@ class Solution:
 # ----------------------------
 # Helper functions for testing
 # ----------------------------
-
 # Convert Python list -> Linked list
 def build_linked_list(values):
     dummy = ListNode()
@@ -40,7 +39,6 @@ def build_linked_list(values):
         current.next = ListNode(val)
         current = current.next
     return dummy.next
-
 # Convert Linked list -> Python list
 def linked_list_to_list(head):
     result = []
