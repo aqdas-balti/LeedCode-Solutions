@@ -19,7 +19,6 @@ class Solution:
                 list2 = list2.next     # Move list2 pointer forward
 
             current = current.next     # Move the current pointer to the end
-
         # Attach the remaining nodes of whichever list is not empty
         if list1:
             current.next = list1
@@ -27,7 +26,6 @@ class Solution:
             current.next = list2
 
         return dummy.next   # Return the merged list starting after dummy
-
 # ----------------------------
 # Helper functions for testing
 # ----------------------------
