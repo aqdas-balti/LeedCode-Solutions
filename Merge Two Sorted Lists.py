@@ -3,10 +3,12 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 class Solution:
     def mergeTwoLists(self, list1, list2):
         dummy = ListNode(-1)   # Create a dummy node as a fake start
         current = dummy        # Pointer 'current' starts at dummy
+
         # Traverse both lists while they are not empty
         while list1 and list2:
             if list1.val < list2.val:
@@ -17,6 +19,7 @@ class Solution:
                 list2 = list2.next     # Move list2 pointer forward
 
             current = current.next     # Move the current pointer to the end
+
         # Attach the remaining nodes of whichever list is not empty
         if list1:
             current.next = list1
@@ -24,6 +27,7 @@ class Solution:
             current.next = list2
 
         return dummy.next   # Return the merged list starting after dummy
+
 # ----------------------------
 # Helper functions for testing
 # ----------------------------
