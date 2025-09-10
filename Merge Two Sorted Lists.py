@@ -8,6 +8,7 @@ class Solution:
     def mergeTwoLists(self, list1, list2):
         dummy = ListNode(-1)   # Create a dummy node as a fake start
         current = dummy        # Pointer 'current' starts at dummy
+
         # Traverse both lists while they are not empty
         while list1 and list2:
             if list1.val < list2.val:
@@ -16,7 +17,9 @@ class Solution:
             else:
                 current.next = list2   # Attach list2 node to the merged list
                 list2 = list2.next     # Move list2 pointer forward
+
             current = current.next     # Move the current pointer to the end
+
         # Attach the remaining nodes of whichever list is not empty
         if list1:
             current.next = list1
